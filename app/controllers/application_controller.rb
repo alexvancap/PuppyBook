@@ -18,7 +18,15 @@ class ApplicationController < ActionController::Base
     end
 
     def login
-        @puppies = Puppy.all
+        puppy = Puppy.find_by({email: params[:email]})
+        if puppy
+            if puppy.authenticate(params[:password])
+                session['logged_in?'] = true
+            end
+        else
+            puts "That email has not been found!"
+        end
+        
     end
 
     def allowed_params
