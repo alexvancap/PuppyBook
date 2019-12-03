@@ -1,0 +1,41 @@
+<%=form_with({model: @new_puppy}) do |form| %>
+    
+    <div>
+        <label>profile picture:</label>
+        <%=form.file_field(:picture){default: nil}%>
+    </div>
+    
+    <div>
+        <label>full name:</label>
+        <%=form.text_field(:name){required}%>
+    </div>
+
+    <div>
+        <label>breed:</label>
+        <%=form.text_field(:breed){required}%>
+    </div>
+
+    <div>
+        <label>age:</label>
+        <%= form.date_field(:age){required}%>
+    </div>
+
+    <div>
+        <label>email:</label>
+        <%=form.email_field(:email){required}%>
+    </div>
+
+    <div>
+        <label>password:</label>
+        <%=form.password_field(:password){required}%>
+        <br \>
+        <label>repeat password:</label>
+        <%=form.password_field(:repeated_password){required}%>
+    </div>
+
+    <div>
+        <%=form.submit("register")%>
+    </div>
+
+
+<%end%>
