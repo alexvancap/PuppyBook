@@ -10,18 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_223627) do
+ActiveRecord::Schema.define(version: 2019_12_03_164303) do
 
-  create_table "friends", force: :cascade do |t|
-    t.integer "user1_id"
-    t.integer "user2_id"
+  create_table "friendships", force: :cascade do |t|
+    t.integer "puppy_id"
+    t.integer "friend_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.integer "likes"
-    t.integer "user_id"
+    t.integer "puppy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "puppies", force: :cascade do |t|
@@ -32,6 +36,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_223627) do
     t.string "bio"
     t.string "password"
     t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

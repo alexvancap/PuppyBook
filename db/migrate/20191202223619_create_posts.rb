@@ -4,7 +4,9 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :body
       t.integer :likes
-      t.integer :user_id
+      t.integer :puppy_id
+
+      t.timestamps
     end
   end
 end
