@@ -3009,3 +3009,89 @@ Processing by PuppiesController#show as HTML
 Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 4726)
 
 
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:04:16 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 5551)
+
+
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:13:36 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 5578)
+
+
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:14:33 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 5565)
+
+
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:14:46 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 5549)
+
+
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:15:25 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2912)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 4665)
+
+
+  
+ActionView::Template::Error (undefined method `gender' for #<Puppy:0x00007ff6f666b378>):
+    1: <h2> <%= @puppy.name %> </h2>
+    2: <p> <%= @puppy.bio %> </p>
+    3: <p> <%= @puppy.gender %> </p>
+    4: <p> <%= @puppy.age %> </p>
+  
+app/views/puppies/show.html.erb:3
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:15:37 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 5589)
+
+
+Started GET "/puppies/7" for ::1 at 2019-12-03 17:18:28 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:39:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 5598)
+
+
