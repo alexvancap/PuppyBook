@@ -6,3 +6,4 @@ Rails.application.routes.draw do
   get ('/register'), to: ('application#register')
   get ('/login'), to: ('application#login')
 end
+
