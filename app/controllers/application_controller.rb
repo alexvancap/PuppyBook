@@ -9,10 +9,10 @@ class ApplicationController < ActionController::Base
             if params[:password] == params[:repeated_password]
                 Puppy.create(allowed_params[:puppy])
             else
-                puts "Your passwords did not match!"
+                flash[:password] = "Your passwords did not match!"
             end
         else
-            puts "That email already exists!"
+            flash[:email] =  "That email already exists!"
         end
         redirect_to('/login')
     end
@@ -22,11 +22,14 @@ class ApplicationController < ActionController::Base
         if puppy
             if puppy.authenticate(params[:password])
                 session['logged_in?'] = true
+                session['user_id'] = puppy.id
+                redirect_to("/puppies/#{puppy.id}")
+            else
+                flash[:password] = "Wrong password!"
             end
         else
-            puts "That email has not been found!"
+            flash[:email] = "That email doesn't exist"
         end
-        
     end
 
     def allowed_params
@@ -41,8 +44,14 @@ class ApplicationController < ActionController::Base
         })
     end
 
-def index
+    def index
+        if !session['logged_in?'] == true
+            redirect_to("/login")
+        end
+    end
 
-end
-
+    def logout
+        session['logged_in?'] = false
+        redirect_to('/login')
+    end
 end
