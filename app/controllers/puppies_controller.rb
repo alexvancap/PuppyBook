@@ -30,8 +30,17 @@ class PuppiesController < ApplicationController
     def edit_profile
         if !session['logged_in?']
             redirect_to("/login")
-        end
+        else
 
+            user = Puppy.find(params[:id])
+            if params[:password]
+                new_password = BCrypt::Password.create(params[:password])
+                user.update({password_digest: new_password })
+                redirect_to '/login'
+            end
+        end
     end
+
+
 
 end
