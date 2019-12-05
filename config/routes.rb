@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get ('/puppies/:id/friends'), to: ('puppies#friends')
   get ('/puppies/:id/unfriend/:friend_id'), to: ('puppies#unfriend')
   get ('/puppies/:id/edit_profile'), to: ('puppies#edit_profile')
+  post ('/puppies/:id/edit_profile'), to: ('puppies#edit_profile')
 
   #posts
   get ('/posts/:id/like'), to: ('posts#like')
