@@ -1,12 +1,20 @@
 <%@posts.each do |array_of_posts|%>
    <% array_of_posts.each do |post|%>
-        <div>
-            <%=form_with method: 'get', url: "/posts/#{post.id}/like" do |form|%>
-                <h1><%=post.title%></h1>
-                <p><%=post.body%></p>
-                <p>like(s): <%=post.likes%></p>
-                <%=form.submit("like")%>
-            <%end%>
+        <div class="container align-middle col-sm-7">
+            <div class="card text-center">
+                <div class="card-header">
+                    <%post.puppy.name%>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><%=post.title%></h5>
+                    <p class="card-text"><%=post.body%></p>
+                    <p class="card-text"><%=post.likes%> like(s)</p>
+                    <a href="/posts/<%=post.id%>/like" class="btn btn-primary">like</a>
+                </div>
+                <div class="card-footer text-muted">
+                    <%=post.created_at%> by: <%=link_to(post.puppy.name, "puppies/#{post.puppy_id}")%>
+                </div>
+            </div>
         </div>
     <%end%>
 <%end%>

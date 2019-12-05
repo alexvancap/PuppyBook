@@ -50,7 +50,6 @@ class ApplicationController < ActionController::Base
                 :age,
                 :email,
                 :password,
-                :bio
     ])
     end
 

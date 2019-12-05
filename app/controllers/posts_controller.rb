@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
     
-    def like
+    def 
+        if !session['logged_in?'] == true
+            redirect_to("/login")
+        end
         post = Post.find(params[:id])
         likes = post.likes + 1
         post.update({likes: likes})
-        redirect_to ("/puppies")
+        redirect_to "/", id: params[:object_id]
     end
 
 end
