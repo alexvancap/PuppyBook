@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     
     def index
-        if !session['logged_in?'] == true
+        if !session['logged_in?']
             redirect_to("/login")
         end
         puppy = Puppy.find(session[:user_id])
@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
     end
 
     def create
+        if !session['logged_in?']
+            redirect_to("/login")
+        end
         if !Puppy.find_by({email: params[:email]})
             if params[:password] == params[:repeated_password]
                 Puppy.create(allowed_params)

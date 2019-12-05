@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
     
     def 
-        if !session['logged_in?'] == true
+        if !session['logged_in?']
             redirect_to("/login")
         end
         post = Post.find(params[:id])

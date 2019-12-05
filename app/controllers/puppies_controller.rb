@@ -4,14 +4,14 @@ class PuppiesController < ApplicationController
     end
 
     def show
-        if !session['logged_in?'] == true
+        if !session['logged_in?']
             redirect_to("/login")
         end
         @puppy = Puppy.find(params[:id])
     end
 
     def friends
-        if !session['logged_in?'] == true
+        if !session['logged_in?']
             redirect_to("/login")
         end
         @puppy = Puppy.find(session[:user_id])
@@ -19,7 +19,7 @@ class PuppiesController < ApplicationController
     end
 
     def unfriend
-        if !session['logged_in?'] == true
+        if !session['logged_in?']
             redirect_to("/login")
         end
         matchup = Friendship.find_by({puppy_id: params[:id], friend_id: params[:friend_id]})
@@ -28,7 +28,7 @@ class PuppiesController < ApplicationController
     end
 
     def edit_profile
-        if !session['logged_in?'] == true
+        if !session['logged_in?']
             redirect_to("/login")
         end
 
