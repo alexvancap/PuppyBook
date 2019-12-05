@@ -1,0 +1,12 @@
+<%@posts.each do |array_of_posts|%>
+   <% array_of_posts.each do |post|%>
+        <div>
+            <%=form_with method: 'get', url: "/posts/#{post.id}/like" do |form|%>
+                <h1><%=post.title%></h1>
+                <p><%=post.body%></p>
+                <p>like(s): <%=post.likes%></p>
+                <%=form.submit("like")%>
+            <%end%>
+        </div>
+    <%end%>
+<%end%>

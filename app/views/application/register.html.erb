@@ -1,41 +1,73 @@
-<%=form_with({model: @new_puppy}) do |form| %>
-    
-    <div>
-        <label>profile picture:</label>
-        <%=form.file_field(:picture)%>
-    </div>
-    
-    <div>
-        <label>full name:</label>
-        <%=form.text_field(:name){required}%>
-    </div>
 
-    <div>
-        <label>breed:</label>
-        <%=form.text_field(:breed){required}%>
-    </div>
 
-    <div>
-        <label>age:</label>
-        <%= form.date_field(:age){required}%>
-    </div>
 
-    <div>
-        <label>email:</label>
-        <%=form.email_field(:email){required}%>
-    </div>
+<div class="container align-middle col-sm-5">
+<br \>
+<h1>register</h1>
+<br \>
+    <form class="form-horizontal" action="/register" method="POST">
+        <input type="hidden" name="authenticity_token" value="token_value">
+        
+        <div class="form-group">
+            <div class="input-group-prepend">
+            </div>
+            <div class="custom-file">
+                <input type="file" name="picture" class="custom-file-input" id="inputGroupFile01"
+                 aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="inputGroupFile01">Choose picture</label>
+            </div>
+        </div>
 
-    <div>
-        <label>password:</label>
-        <%=form.password_field(:password){required}%>
+        <div class="form-group">
+            <label class="control-label" for="name">Name:</label>
+        
+            <input type="text" class="form-control" name="name" placeholder="Enter password">
+        </div>
+
         <br \>
-        <label>repeat password:</label>
-        <%=form.password_field(:repeated_password){required}%>
-    </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Bio:</span>
+            </div>
+            <textarea class="form-control" name="bio" aria-label="With textarea"></textarea>
+        </div>
+        <br \>
 
-    <div>
-        <%=form.submit("register")%>
-    </div>
+        <div class="form-group">
+            <label class="control-label" for="breed">Breed:</label>
+        
+            <input type="text" class="form-control" name="breed" placeholder="Enter password">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="age">Birth date:</label>
+        
+            <input type="date" class="form-control" name="age" placeholder="Enter password">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="email">Email:</label>
+        
+            <input type="email" class="form-control" name="email" placeholder="Enter password">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="password">Password:</label>
+        
+            <input type="password" class="form-control" name="password" placeholder="Enter password">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="repeated_password">Repeat Password:</label>
+        
+            <input type="password" class="form-control" name="repeated_password" placeholder="Enter password">
+        </div>
 
 
-<%end%>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+
+    </form>
+<div>

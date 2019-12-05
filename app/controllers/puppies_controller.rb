@@ -1,6 +1,6 @@
 class PuppiesController < ApplicationController
     def index
-
+       
     end
 
     def show
@@ -13,6 +13,17 @@ class PuppiesController < ApplicationController
     def friends
         @puppy = Puppy.find(session[:user_id])
         @friends = @puppy.friends
+    end
+
+    def unfriend
+
+        matchup = Friendship.find_by({puppy_id: params[:id], friend_id: params[:friend_id]})
+        Friendship.destroy(matchup.id)
+        redirect_to("#{puppy_path}/friends")
+    end
+
+    def edit_profile
+
     end
 
 end

@@ -1,13 +1,24 @@
 class ApplicationController < ActionController::Base
     
+    def index
+        if !session['logged_in?'] == true
+            redirect_to("/login")
+        end
+        puppy = Puppy.find(session[:user_id])
+        @posts = []
+        puppy.friendships.each do |friendship|
+            @posts << Post.where(puppy_id: friendship.friend_id)
+        end
+    end
+
     def register
         @new_puppy = Puppy.new
     end
 
     def create
-        if !Puppy.find_by({email: params[:puppy][:email]})
+        if !Puppy.find_by({email: params[:email]})
             if params[:password] == params[:repeated_password]
-                Puppy.create(allowed_params[:puppy])
+                Puppy.create(allowed_params)
             else
                 flash[:password] = "Your passwords did not match!"
             end
@@ -33,21 +44,14 @@ class ApplicationController < ActionController::Base
     end
 
     def allowed_params
-        params.permit({
-            puppy:[
+        params.permit([
                 :name,
                 :breed,
                 :age,
                 :email,
                 :password,
-            ]
-        })
-    end
-
-    def index
-        if !session['logged_in?'] == true
-            redirect_to("/login")
-        end
+                :bio
+    ])
     end
 
     def logout
