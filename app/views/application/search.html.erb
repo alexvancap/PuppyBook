@@ -1,0 +1,10 @@
+<%@found.each do |puppy|%>
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="<%=puppy.picture%>" alt="Card image cap">
+     <div class="card-body">
+        <h5 class="card-title"><%=puppy.name%></h5>
+        <p class="card-text"><%=puppy.bio%></p>
+        <a href="<%=puppies_path(puppy.id)%>" class="btn btn-primary">view profile</a>
+    </div>
+</div>
+<%end%>

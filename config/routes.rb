@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get ('/login'), to: ('application#login')
   post ('/login'), to: ('application#login')
   get ('/logout'), to: ('application#logout')
+  post ('/search'), to: ('application#search')
 
   #puppies
   get ('/puppies/:id/friends'), to: ('puppies#friends')

@@ -3,11 +3,12 @@ class ApplicationController < ActionController::Base
     def index
         if !session['logged_in?']
             redirect_to("/login")
-        end
-        puppy = Puppy.find(session[:user_id])
-        @posts = []
-        puppy.friendships.each do |friendship|
-            @posts << Post.where(puppy_id: friendship.friend_id)
+        else
+            puppy = Puppy.find(session[:user_id])
+            @posts = []
+            puppy.friendships.each do |friendship|
+                @posts << Post.where(puppy_id: friendship.friend_id)
+            end
         end
     end
 
@@ -18,17 +19,18 @@ class ApplicationController < ActionController::Base
     def create
         if !session['logged_in?']
             redirect_to("/login")
-        end
-        if !Puppy.find_by({email: params[:email]})
-            if params[:password] == params[:repeated_password]
-                Puppy.create(allowed_params)
-            else
-                flash[:password] = "Your passwords did not match!"
-            end
         else
-            flash[:email] =  "That email already exists!"
+            if !Puppy.find_by({email: params[:email]})
+                if params[:password] == params[:repeated_password]
+                    Puppy.create(allowed_params)
+                else
+                    flash[:password] = "Your passwords did not match!"
+                end
+            else
+                flash[:email] =  "That email already exists!"
+            end
+            redirect_to('/login')
         end
-        redirect_to('/login')
     end
 
     def login
@@ -59,5 +61,11 @@ class ApplicationController < ActionController::Base
     def logout
         session['logged_in?'] = false
         redirect_to('/login')
+    end
+
+    def search
+        @found = Puppy.all.select do |puppy|
+            puppy.name.downcase.include?(params[:search])
+        end
     end
 end
