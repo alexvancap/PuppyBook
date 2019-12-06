@@ -44,6 +44,13 @@ class PuppiesController < ApplicationController
         end
     end
 
+    def add_friend
+        if !Friendship.find_by(puppy_id: session[:user_id], friend_id: params[:friend_id])
+            Friendship.create(puppy_id: session[:user_id], friend_id: params[:friend_id])
+        end
+        redirect_to("/puppies/#{params[:friend_id]}")
+    end
+
 
 
 end

@@ -4,7 +4,9 @@
      <div class="card-body">
         <h5 class="card-title"><%=puppy.name%></h5>
         <p class="card-text"><%=puppy.bio%></p>
-        <a href="<%=puppies_path(puppy.id)%>" class="btn btn-primary">view profile</a>
+        <a href="/puppies/<%=puppy.id%>" class="btn btn-primary">view profile</a>
+        <a href="/puppies/add_friend/<%=puppy.id%>" class="btn btn-primary">add friend</a>
+
     </div>
 </div>
 <%end%>

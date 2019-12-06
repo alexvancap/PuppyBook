@@ -4,4 +4,7 @@ class Puppy < ApplicationRecord
     has_many :friends, through: :friendships
 
     has_secure_password
+
+    
+    
 end

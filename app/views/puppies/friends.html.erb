@@ -1,15 +1,15 @@
 <h1>List of friends:</h1>
-    <div style="display: flex">
-        <%@friends.each do |friend|%>
+<div style="display: flex">
+    <%@friends.each do |friend|%>
 
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<%=friend.picture%>" alt="Card image cap">
-                    <div class="card-body">
-                    <h5 class="card-title"><%=friend.name%></h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="<%=puppies_path(friend.id)%>" class="btn btn-primary">view profile</a>
-                    <a href="/puppies/<%=@puppy.id%>/unfriend/<%=friend.id%>" class="btn btn-primary">unfriend</a>
-                </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<%=friend.picture%>" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title"><%=friend.name%></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/puppies/<%=friend.id%>" class="btn btn-primary">view profile</a>
+                <a href="/puppies/<%=session[:user_id]%>/unfriend/<%=friend.id%>" class="btn btn-primary">unfriend</a>
             </div>
-        <%end%>
-    </div>
+        </div>
+    <%end%>
+</div>
