@@ -9360,3 +9360,636 @@ Processing by PuppiesController#show as HTML
 Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.4ms | Allocations: 4771)
 
 
+Started GET "/login" for ::1 at 2019-12-06 11:00:36 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (1.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 2.6ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 68.6ms | ActiveRecord: 1.9ms | Allocations: 12826)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:00:40 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"pIw80hI60Fu1bMmVohh1XzHFu3IS45+Shtn+7pbWbDRVFVTwR0eXOA4inA57nkrtZKBPpGvQUluhoNQLVrjEtg==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (1.9ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/118
+Completed 302 Found in 110ms (ActiveRecord: 2.7ms | Allocations: 7679)
+
+
+Started GET "/puppies/118" for ::1 at 2019-12-06 11:00:40 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"118"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 118], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 0.2ms | Allocations: 5362)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPuppy Load (5.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (6.5ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 118]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 119]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (2.4ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 120]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.5ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 121]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 122]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (2.6ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 123]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 71]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (1.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 72]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (1.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 73]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 74]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 75]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 76]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFriendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.6ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 84]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.9ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 85]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.5ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 86]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (1.1ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 88]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (48.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bobby"], ["breed", "bulldog"], ["age", "6"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "awesome dog"], ["email", "bobby@puppy.com"], ["created_at", "2019-12-06 17:01:07.062221"], ["updated_at", "2019-12-06 17:01:07.062221"], ["password_digest", "$2a$10$6a73VtyJR94N06Kjnu/4LOlk/JvpGQpAxBR1lwLPY9tCTg3QnCZF2"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisey"], ["breed", "bulldog"], ["age", "9"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "cool dog"], ["email", "daisey@puppy.com"], ["created_at", "2019-12-06 17:01:07.240948"], ["updated_at", "2019-12-06 17:01:07.240948"], ["password_digest", "$2a$10$0ZxgzyU/R17gtuERwkmLOexTLp9TToNVi.LI8ToI2svSWwMSGBco6"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alex"], ["breed", "bulldog"], ["age", "6"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "awesome dog"], ["email", "alex@puppy.com"], ["created_at", "2019-12-06 17:01:07.376295"], ["updated_at", "2019-12-06 17:01:07.376295"], ["password_digest", "$2a$10$kthywPLBs7R.uykPwYzwBuHpKBcxIOe.W7yNPMysGk2tAVHvukV.a"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nathan"], ["breed", "bulldog"], ["age", "9"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "cool dog"], ["email", "nathan@puppy.com"], ["created_at", "2019-12-06 17:01:07.479951"], ["updated_at", "2019-12-06 17:01:07.479951"], ["password_digest", "$2a$10$wJfpS7Og5HiAGbvbawqEsOM8uOxpSs6DyMu2PyiXRj6AC4pjIOhdG"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe"], ["breed", "bulldog"], ["age", "6"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "awesome dog"], ["email", "joe@puppy.com"], ["created_at", "2019-12-06 17:01:07.567292"], ["updated_at", "2019-12-06 17:01:07.567292"], ["password_digest", "$2a$10$XGxpGn4dEMCPtPXRswNUu.yeJyPSddu7xaTtnRIawgnX952HwSZwW"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vivian"], ["breed", "bulldog"], ["age", "9"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "cool dog"], ["email", "vivian@puppy.com"], ["created_at", "2019-12-06 17:01:07.669901"], ["updated_at", "2019-12-06 17:01:07.669901"], ["password_digest", "$2a$10$RUUVixzc8nanHue1tg6OWeBxisrSwyxnPDj/.8ZQ7P15VnqI/cjtW"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My first Post"], ["body", "i don't know mann"], ["likes", 1], ["puppy_id", 124], ["created_at", "2019-12-06 17:01:07.685316"], ["updated_at", "2019-12-06 17:01:07.685316"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "good bath"], ["body", "My owner washed me really well today!"], ["likes", 1], ["puppy_id", 125], ["created_at", "2019-12-06 17:01:07.693600"], ["updated_at", "2019-12-06 17:01:07.693600"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nice walk"], ["body", "I had a good walk with my owner today."], ["likes", 1], ["puppy_id", 124], ["created_at", "2019-12-06 17:01:07.703300"], ["updated_at", "2019-12-06 17:01:07.703300"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My first Post"], ["body", "i don't know mann"], ["likes", 1], ["puppy_id", 126], ["created_at", "2019-12-06 17:01:07.712915"], ["updated_at", "2019-12-06 17:01:07.712915"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My first Post"], ["body", "i don't know mann"], ["likes", 1], ["puppy_id", 126], ["created_at", "2019-12-06 17:01:07.720240"], ["updated_at", "2019-12-06 17:01:07.720240"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My first Post"], ["body", "i don't know mann"], ["likes", 1], ["puppy_id", 126], ["created_at", "2019-12-06 17:01:07.727693"], ["updated_at", "2019-12-06 17:01:07.727693"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.7ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 124], ["friend_id", 125], ["created_at", "2019-12-06 17:01:07.736149"], ["updated_at", "2019-12-06 17:01:07.736149"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 124], ["friend_id", 126], ["created_at", "2019-12-06 17:01:07.743740"], ["updated_at", "2019-12-06 17:01:07.743740"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.7ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 124], ["friend_id", 127], ["created_at", "2019-12-06 17:01:07.751395"], ["updated_at", "2019-12-06 17:01:07.751395"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 124], ["friend_id", 128], ["created_at", "2019-12-06 17:01:07.759960"], ["updated_at", "2019-12-06 17:01:07.759960"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 124], ["friend_id", 129], ["created_at", "2019-12-06 17:01:07.770141"], ["updated_at", "2019-12-06 17:01:07.770141"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPuppy Load (0.6ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.8ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 124]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 125]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 126]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 127]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (0.7ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 128]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Destroy (1.0ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 129]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (1.0ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 77]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 78]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (1.0ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 79]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 80]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 81]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 82]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFriendship Load (0.6ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.5ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 89]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.6ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 90]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.7ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 91]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.6ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 92]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Destroy (0.6ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 93]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (1.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bobby"], ["breed", "bulldog"], ["age", "6"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "awesome dog"], ["email", "bobby@puppy.com"], ["created_at", "2019-12-06 17:02:46.763422"], ["updated_at", "2019-12-06 17:02:46.763422"], ["password_digest", "$2a$10$Pyox.RvBlQcmP1f/AZSu/eVP0oXJcp4vHxjPH1j/FoIBwzNkLjVde"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisey"], ["breed", "bulldog"], ["age", "9"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "cool dog"], ["email", "daisey@puppy.com"], ["created_at", "2019-12-06 17:02:46.839515"], ["updated_at", "2019-12-06 17:02:46.839515"], ["password_digest", "$2a$10$aQeQQFspMA71lOpGpF7Jb.QDhXy5G/lJ50iWz63Pzob1F86NpBpiO"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alex"], ["breed", "bulldog"], ["age", "6"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "awesome dog"], ["email", "alex@puppy.com"], ["created_at", "2019-12-06 17:02:46.915207"], ["updated_at", "2019-12-06 17:02:46.915207"], ["password_digest", "$2a$10$/P9O0frN0XRjdn/U7/hnm.HsrNiMRSPe9zj6L1nsQG0maFMm/eUpm"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.4ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nathan"], ["breed", "bulldog"], ["age", "9"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "cool dog"], ["email", "nathan@puppy.com"], ["created_at", "2019-12-06 17:02:46.991638"], ["updated_at", "2019-12-06 17:02:46.991638"], ["password_digest", "$2a$10$NZxTYx2E04EXEjyOHEasJ.MC6Sh79JTBGC7eampvaEUuNZjG2LBMS"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (94.0ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe"], ["breed", "bulldog"], ["age", "6"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "awesome dog"], ["email", "joe@puppy.com"], ["created_at", "2019-12-06 17:02:47.078320"], ["updated_at", "2019-12-06 17:02:47.078320"], ["password_digest", "$2a$10$5iXCR9Fb0bS.BReYWLAWeODRHfCNIOlERLm.PO5dEJtONsqLBAwH6"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vivian"], ["breed", "bulldog"], ["age", "9"], ["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["bio", "cool dog"], ["email", "vivian@puppy.com"], ["created_at", "2019-12-06 17:02:47.290981"], ["updated_at", "2019-12-06 17:02:47.290981"], ["password_digest", "$2a$10$lPJ/1NWRe.I16LxuZjNA6uHQ3KSMwRTF2.gHMoFGCfTHRTr1m1ddO"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (1.0ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tommy"], ["breed", "herder"], ["age", "15"], ["picture", "https://cdn2-www.dogtime.com/assets/uploads/2018/10/puppies-cover.jpg"], ["bio", "I am a puppy boii"], ["email", "tommy@puppy.com"], ["created_at", "2019-12-06 17:02:47.419423"], ["updated_at", "2019-12-06 17:02:47.419423"], ["password_digest", "$2a$10$frhOZlDB4TyGgyI7dYOwBuAj.svOl9JTcAJtyzbjC0lA.8SeNkTs."]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bella"], ["breed", "syberian husky"], ["age", "5"], ["picture", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Black-Magic-Big-Boy.jpg/440px-Black-Magic-Big-Boy.jpg"], ["bio", "I am a puppy boii"], ["email", "bella@puppy.com"], ["created_at", "2019-12-06 17:02:47.498772"], ["updated_at", "2019-12-06 17:02:47.498772"], ["password_digest", "$2a$10$t52OMLKxB1MF91yn1c3KAujOUfMQeKJDQ9UfRFgkvbOVV8obAjtXC"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["breed", "pug"], ["age", "7"], ["picture", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/440px-Mops_oct09_cropped2.jpg"], ["bio", "I am a puppy boii"], ["email", "charlie@puppy.com"], ["created_at", "2019-12-06 17:02:47.573278"], ["updated_at", "2019-12-06 17:02:47.573278"], ["password_digest", "$2a$10$J.M.pCVfT4/45nq1Dix7iOVsPsgrGyI4RZZp8pdATqHGm3MI8JT4y"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.9ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "bio", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luna"], ["breed", "pomerian"], ["age", "100"], ["picture", "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225627/Pomeranian-On-White-01.jpg"], ["bio", "I am a puppy boii"], ["email", "luna@puppy.com"], ["created_at", "2019-12-06 17:02:47.652392"], ["updated_at", "2019-12-06 17:02:47.652392"], ["password_digest", "$2a$10$dQwftkEKdsxfOVGMBp4WrO0DUCOGYGWQEhlKhi0qYVHBurUnf4d1O"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (4.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "sad human"], ["body", "just. lost my human. i borked. and borked. turns out. they were just. in a different room. alert level. back to green."], ["likes", 1], ["puppy_id", 134], ["created_at", "2019-12-06 17:02:47.683124"], ["updated_at", "2019-12-06 17:02:47.683124"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "bark"], ["body", "I grrrborked. at the huricane. noise on tv. it did not. do much. I apologize"], ["likes", 1], ["puppy_id", 136], ["created_at", "2019-12-06 17:02:47.697172"], ["updated_at", "2019-12-06 17:02:47.697172"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "bad tv"], ["body", "the human. is always. sad after. wathcing tv. so i hid. all the remotes. i could find."], ["likes", 1], ["puppy_id", 137], ["created_at", "2019-12-06 17:02:47.706550"], ["updated_at", "2019-12-06 17:02:47.706550"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "i love humans"], ["body", "occasionally during our walks. someone will pass us. and completely ignore my human. but whisper hello to me. i really enjoy this."], ["likes", 1], ["puppy_id", 138], ["created_at", "2019-12-06 17:02:47.715132"], ["updated_at", "2019-12-06 17:02:47.715132"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My first Post"], ["body", "T don't. Know mann"], ["likes", 1], ["puppy_id", 139], ["created_at", "2019-12-06 17:02:47.725127"], ["updated_at", "2019-12-06 17:02:47.725127"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My first Post"], ["body", "i don't know mann"], ["likes", 1], ["puppy_id", 130], ["created_at", "2019-12-06 17:02:47.760013"], ["updated_at", "2019-12-06 17:02:47.760013"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "good bath"], ["body", "My owner washed me really well today!"], ["likes", 1], ["puppy_id", 131], ["created_at", "2019-12-06 17:02:47.771916"], ["updated_at", "2019-12-06 17:02:47.771916"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "likes", "puppy_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nice walk"], ["body", "I had a good walk with my owner today."], ["likes", 1], ["puppy_id", 130], ["created_at", "2019-12-06 17:02:47.809953"], ["updated_at", "2019-12-06 17:02:47.809953"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.7ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 131], ["created_at", "2019-12-06 17:02:47.826141"], ["updated_at", "2019-12-06 17:02:47.826141"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 132], ["created_at", "2019-12-06 17:02:47.848021"], ["updated_at", "2019-12-06 17:02:47.848021"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 133], ["created_at", "2019-12-06 17:02:47.868880"], ["updated_at", "2019-12-06 17:02:47.868880"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.7ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 134], ["created_at", "2019-12-06 17:02:47.898575"], ["updated_at", "2019-12-06 17:02:47.898575"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 135], ["created_at", "2019-12-06 17:02:47.915466"], ["updated_at", "2019-12-06 17:02:47.915466"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (2.8ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 136], ["created_at", "2019-12-06 17:02:47.936323"], ["updated_at", "2019-12-06 17:02:47.936323"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (4.0ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 137], ["created_at", "2019-12-06 17:02:47.952070"], ["updated_at", "2019-12-06 17:02:47.952070"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 138], ["created_at", "2019-12-06 17:02:47.965288"], ["updated_at", "2019-12-06 17:02:47.965288"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFriendship Create (0.6ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 130], ["friend_id", 139], ["created_at", "2019-12-06 17:02:47.981216"], ["updated_at", "2019-12-06 17:02:47.981216"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/logout" for ::1 at 2019-12-06 11:03:30 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms | Allocations: 417)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:03:30 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (2.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 4.2ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 61.8ms | ActiveRecord: 2.5ms | Allocations: 11947)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:03:35 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"rkS8nDwAqoWVFYpr17IfU8jisOmYjDJNsSq9l+b2i7lf3dS+aX3t5i5b3/AONCDhnYdEP+G//4SWU5dyJpgjOw==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.6ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 119ms (ActiveRecord: 1.1ms | Allocations: 7660)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 11:03:36 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 0.5ms | Allocations: 5363)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:03:39 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"5qIbEOY7ypTRg1NCDzyoa1y56KSDZif8x/QOCpS8qpMXO3Mys0aN92rNBtnWupfZCdwccvpV6jXgjSTvVNICEQ==", "search"=>""}
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 2.5ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 32.2ms | ActiveRecord: 0.5ms | Allocations: 5241)
+
+
+Started GET "/puppies/add_friend/137" for ::1 at 2019-12-06 11:03:46 -0600
+Processing by PuppiesController#add_friend as HTML
+  Parameters: {"friend_id"=>"137"}
+  [1m[36mFriendship Load (4.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ? AND "friendships"."friend_id" = ? LIMIT ?[0m  [["puppy_id", 130], ["friend_id", 137], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:48:in `add_friend'
+Redirected to http://localhost:3000/puppies/137
+Completed 302 Found in 34ms (ActiveRecord: 5.6ms | Allocations: 5048)
+
+
+Started GET "/puppies/137" for ::1 at 2019-12-06 11:03:46 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"137"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 42.8ms | ActiveRecord: 0.2ms | Allocations: 4488)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:03:48 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"Al3Tu6VM9iFGWIzcxlXbCRbxIGUlHm+11MHGM99ZTwzzxLuZ8DGxQv0W2Ucf0+S7Q5TUs1wtonzzuOzWHzfnjg==", "search"=>""}
+  [1m[36mPuppy Load (1.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 1.0ms | Allocations: 4871)
+
+
+Started GET "/puppies/add_friend/139" for ::1 at 2019-12-06 11:03:51 -0600
+Processing by PuppiesController#add_friend as HTML
+  Parameters: {"friend_id"=>"139"}
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ? AND "friendships"."friend_id" = ? LIMIT ?[0m  [["puppy_id", 130], ["friend_id", 139], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:48:in `add_friend'
+Redirected to http://localhost:3000/puppies/139
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 809)
+
+
+Started GET "/puppies/139" for ::1 at 2019-12-06 11:03:51 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"139"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.3ms | Allocations: 4480)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:03:52 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"AYnajDvUMM+VsQb5c+yjtXHN7YwsS4tWKBNVJv1XJPzwELKubql3rC7/U2KqapwHJKgZWlV4Rp8Pan/DPTmMfg==", "search"=>""}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 4853)
+
+
+Started GET "/puppies/add_friend/136" for ::1 at 2019-12-06 11:03:56 -0600
+Processing by PuppiesController#add_friend as HTML
+  Parameters: {"friend_id"=>"136"}
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ? AND "friendships"."friend_id" = ? LIMIT ?[0m  [["puppy_id", 130], ["friend_id", 136], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:48:in `add_friend'
+Redirected to http://localhost:3000/puppies/136
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 808)
+
+
+Started GET "/puppies/136" for ::1 at 2019-12-06 11:03:56 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"136"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 4481)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:03:57 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 131]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 132]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 133]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 134]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 135]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 136]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 137]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.9ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 138]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 138], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 139]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 63.3ms | Allocations: 14601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 205ms (Views: 95.3ms | ActiveRecord: 6.3ms | Allocations: 23715)
+
+
+Started GET "/posts/89/like" for ::1 at 2019-12-06 11:04:10 -0600
+Processing by PostsController#like as HTML
+  Parameters: {"id"=>"89"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `like'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+  [1m[36mPost Update (2.0ms)[0m  [1m[33mUPDATE "posts" SET "likes" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["likes", 2], ["updated_at", "2019-12-06 17:04:10.921007"], ["id", 89]]
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 4.2ms | Allocations: 4391)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:04:10 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 131]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 132]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 133]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 134]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 135]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 136]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 137]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 138]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 138], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 139]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 52.7ms | Allocations: 9604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 90.0ms | ActiveRecord: 3.6ms | Allocations: 15190)
+
+
+Started GET "/posts/83/like" for ::1 at 2019-12-06 11:04:12 -0600
+Processing by PostsController#like as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `like'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+  [1m[36mPost Update (1.1ms)[0m  [1m[33mUPDATE "posts" SET "likes" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["likes", 2], ["updated_at", "2019-12-06 17:04:12.071610"], ["id", 83]]
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:9:in `like'
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 4.6ms | Allocations: 4073)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:04:12 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 131]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 132]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 133]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 134]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 135]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 136]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 137]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 138]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 138], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 139]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 38.5ms | Allocations: 9604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 43.3ms | ActiveRecord: 3.8ms | Allocations: 15188)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 11:05:09 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 6371)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:05:13 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"pEQnPqrIS3AumczQmYH523aMV4ucgCT4mTVEZE7pwlNV3U8c/7UME5XXmUtAB8ZpI+mjXeWz6TG+TG6Bjodq0Q==", "search"=>""}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 5330)
+
+
+Started GET "/search" for ::1 at 2019-12-06 11:06:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/search" for ::1 at 2019-12-06 11:06:27 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"zKSSWsH1ujJF21fA3wCkwrCsYi+Jwdsu74J3nyqt9+Q9Pfp4lIj9Uf6VAlsGhptw5cmW+fDyFufI+1166sNfZg==", "search"=>""}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 5.3ms | Allocations: 352)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 0.2ms | Allocations: 5895)
+
+

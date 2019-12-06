@@ -1,8 +1,8 @@
 <h1>List of friends:</h1>
-<div style="display: flex">
+<div style="display: flex; flex-wrap: wrap">
     <%@friends.each do |friend|%>
 
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin: 0 auto">
             <img class="card-img-top" src="<%=friend.picture%>" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title"><%=friend.name%></h5>

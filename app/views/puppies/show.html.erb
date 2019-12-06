@@ -1,5 +1,10 @@
-<h2> <%= @puppy.name %> </h2>
-<img src="<%=@puppy.picture%>" width="250px" height="250px">
-<p> <%= @puppy.bio %> </p>
-<p> <%= @puppy.breed %> </p>
-<p> <%= @puppy.age %> </p>
+<div class="col-sm">
+<div class="card" style="max-width: 30%; height: 75%; margin: 0 auto">
+  <img class="card-img-top" src="<%=@puppy.picture%>" width="250px" height="250px" alt="Profilepicture of <%= @puppy.name %>">
+  <div class="card-body">
+    <h1 class="card-text" style="text-align: center"><%= @puppy.name %></h1>
+    <p class="card-text" style="text-align: center"><%= @puppy.bio %></p>
+    <p class="card-text" style="color: #808080; text-align: right">-<%= @puppy.breed %>, <%= @puppy.age %>years old</p>
+  </div>
+</div>
+</div>
