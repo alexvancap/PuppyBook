@@ -10,14 +10,14 @@ Puppy.destroy_all
 Post.destroy_all
 Friendship.destroy_all
 
-bobby = Puppy.create({name: "Bobby", breed: "bulldog", age: "6", picture: "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg", bio: "awesome dog", password:"123", email:"bobby@puppy.com"})
-daisey = Puppy.create({name: "Daisey", breed: "bulldog", age: "9", picture: "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg", bio: "cool dog", password:"123", email:"daisey@puppy.com"})
+bobby = Puppy.create({name: "Bobby", breed: "bulldog", age: "6", picture: "http://cdn.akc.org/BulldogPup_BlogHeader.jpg", bio: "awesome dog", password:"123", email:"bobby@puppy.com"})
+daisey = Puppy.create({name: "Daisey", breed: "bulldog", age: "9", picture: "https://images.contentful.com/sv9mtllmoeui/5Ecs61hwmQIOa8sUgcWMKA/a5fa9799cbc6ce8c3a3cd335fccf4c25/blog_05.jpg", bio: "cool dog", password:"123", email:"daisey@puppy.com"})
 
-alex = Puppy.create({name: "Alex", breed: "bulldog", age: "6", picture: "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg", bio: "awesome dog", password:"123", email:"alex@puppy.com"})
-nathan = Puppy.create({name: "Nathan", breed: "bulldog", age: "9", picture: "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg", bio: "cool dog", password:"123", email:"nathan@puppy.com"})
+alex = Puppy.create({name: "Alex", breed: "bulldog", age: "6", picture: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12193133/German-Shepherd-Puppy-Fetch.jpg", bio: "awesome dog", password:"123", email:"alex@puppy.com"})
+nathan = Puppy.create({name: "Nathan", breed: "bulldog", age: "9", picture: "https://cdn.shopify.com/s/files/1/1362/5949/articles/1-furbo-feature_1000x.jpg?v=1563392943", bio: "cool dog", password:"123", email:"nathan@puppy.com"})
 
-joe = Puppy.create({name: "Joe", breed: "bulldog", age: "6", picture: "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg", bio: "awesome dog", password:"123", email:"joe@puppy.com"})
-vivian = Puppy.create({name: "Vivian", breed: "bulldog", age: "9", picture: "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg", bio: "cool dog", password:"123", email:"vivian@puppy.com"})
+joe = Puppy.create({name: "Joe", breed: "bulldog", age: "6", picture: "https://www.fidosavvy.com/images/tiny_puppy_come_500_c.jpg", bio: "awesome dog", password:"123", email:"joe@puppy.com"})
+vivian = Puppy.create({name: "Vivian", breed: "bulldog", age: "9", picture: "https://i.pinimg.com/736x/20/59/dc/2059dc68b3b29ac3a7b322efecfe67a2.jpg", bio: "cool dog", password:"123", email:"vivian@puppy.com"})
 
 tommy = Puppy.create({name: "Tommy", breed: "herder", age: "15", picture: "https://cdn2-www.dogtime.com/assets/uploads/2018/10/puppies-cover.jpg", bio: "I am a puppy boii", password:"123", email:"tommy@puppy.com"})
 bella = Puppy.create({name: "Bella", breed: "syberian husky", age: "5", picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Black-Magic-Big-Boy.jpg/440px-Black-Magic-Big-Boy.jpg", bio: "I am a puppy boii", password:"123", email:"bella@puppy.com"})

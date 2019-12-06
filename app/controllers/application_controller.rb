@@ -17,9 +17,7 @@ class ApplicationController < ActionController::Base
     end
 
     def create
-        if !session['logged_in?']
-            redirect_to("/login")
-        else
+       
             if !Puppy.find_by({email: params[:email]})
                 if params[:password] == params[:repeated_password]
                     Puppy.create(allowed_params)
@@ -30,7 +28,6 @@ class ApplicationController < ActionController::Base
                 flash[:email] =  "That email already exists!"
             end
             redirect_to('/login')
-        end
     end
 
     def login
