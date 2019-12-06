@@ -17,20 +17,20 @@ class ApplicationController < ActionController::Base
     end
 
     def create
-        if !session['logged_in?']
-            redirect_to("/login")
-        else
-            if !Puppy.find_by({email: params[:email]})
-                if params[:password] == params[:repeated_password]
-                    Puppy.create(allowed_params)
-                else
-                    flash[:password] = "Your passwords did not match!"
-                end
+        if !Puppy.find_by({email: params[:email]})
+            if params[:password] == params[:repeated_password]
+                new_pub = Puppy.create(allowed_params)
             else
-                flash[:email] =  "That email already exists!"
+                flash[:password] = "Your passwords did not match!"
             end
-            redirect_to('/login')
+            if params[:picture] == ""
+                 default_pic = "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"
+                 new_pub.update({picture: default_pic})
+            end
+        else
+            flash[:email] =  "That email already exists!"
         end
+        redirect_to('/login')
     end
 
     def login
@@ -65,7 +65,9 @@ class ApplicationController < ActionController::Base
 
     def search
         @found = Puppy.all.select do |puppy|
-            puppy.name.downcase.include?(params[:search])
+            if puppy != Puppy.find(session[:user_id])
+                puppy.name.downcase.include?(params[:search])
+            end
         end
     end
 end

@@ -9993,3 +9993,1985 @@ Processing by ApplicationController#search as HTML
 Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 0.2ms | Allocations: 5895)
 
 
+Started GET "/" for ::1 at 2019-12-06 11:08:15 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 131]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 132]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 133]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 134]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 135]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 136]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 137]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 138]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 138], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 139]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 56.5ms | Allocations: 10522)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 78.1ms | ActiveRecord: 4.5ms | Allocations: 16257)
+
+
+Started GET "/puppies/130/edit_profile" for ::1 at 2019-12-06 11:08:19 -0600
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+  Rendering puppies/edit_profile.html.erb within layouts/application
+  Rendered puppies/edit_profile.html.erb within layouts/application (Duration: 0.9ms | Allocations: 175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.4ms | Allocations: 5215)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 11:08:20 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 4788)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:08:22 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 131]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 132]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 133]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 134]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (3.8ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 135]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 136]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 137]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 138]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 138], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 139]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 9605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 79.8ms | ActiveRecord: 6.4ms | Allocations: 15178)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:08:24 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"gNilO1Og9gLGhR7AWhZrYeOxQhen8vred8Z6tmxYC/NxQc0ZBt2xYX3LS1uDkFTTttS2wd7BNxdQv1BTrDajcQ==", "search"=>""}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.4ms | Allocations: 4847)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:09:31 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 131]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 132]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 133]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 134]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 135]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 136]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 136], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 137]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 137], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 138]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 138], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."puppy_id" = ?[0m  [["puppy_id", 139]]
+  ↳ app/views/application/index.html.erb:2
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 139], ["LIMIT", 1]]
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 48.9ms | Allocations: 10254)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 55.3ms | ActiveRecord: 3.5ms | Allocations: 15829)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:21:51 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:21:51 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 1.0ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.4ms | Allocations: 5519)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:21:52 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 1.7ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 4298)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:22:09 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"DZhTIBglJHgE8wG5OBuvwple59QBVT25BnHkQFHvbGD8ATsCTVhjG7+9VCLhnZBwzDsTAnhm8HAhCM6lkYHE4g==", "picture"=>"", "name"=>"alex", "bio"=>"lol", "breed"=>"lol", "age"=>"2019-01-01", "email"=>"alex@alex.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:22:09 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 4591)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:22:14 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"SnFOnjXFX1lbfJLjQ1AW4yfKTk1dMDdtQOMDCgLbgkS76Ca8YLgYOuAyx3ia1ilRcq+6myQD+qRnminvwrUqxg==", "email"=>"alex@alex.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alex@alex.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4510)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:22:19 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.5ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 3970)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:22:40 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"eHDNre7o1PGPCpj+eElIIpY/M2A3piEUOUXg2cS/c5+J6aWPu5WTkjREzWWhz3eQw1rHtk6V7N0ePMo8BNHbHQ==", "picture"=>"", "name"=>"Alexander Van Cappellen", "bio"=>"zzzz", "breed"=>"herder", "age"=>"2019-12-05", "email"=>"alexvancap@gmail.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:22:40 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 4595)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:23:48 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.3ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 8.5ms | ActiveRecord: 1.2ms | Allocations: 12848)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:24:04 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"Nqr700ZCEEcM7xYz++3PrbRcvknkG6CyZyC/IBAKGj7HM5PxEz9XJLehQ6gia/Af4TlKn50obXtAWZXF0GSyvA==", "picture"=>"", "name"=>"Alexander Van Cappellen", "bio"=>"eee", "breed"=>"aezea", "age"=>"2019-12-11", "email"=>"alex@alex.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alex@alex.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `create'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alexander Van Cappellen"], ["breed", "aezea"], ["age", "2019-12-11"], ["email", "alex@alex.com"], ["created_at", "2019-12-06 17:24:04.442081"], ["updated_at", "2019-12-06 17:24:04.442081"], ["password_digest", "$2a$10$B8nS4KVyqV/l/2EudGVjvOailM.p91fDnzukD3PRjE8Eq8.redGr6"]]
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 81ms (ActiveRecord: 2.6ms | Allocations: 3547)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:24:04 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 4627)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:24:08 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"/t1Q9/jzRAWZbPYJptlK7Ywuw2TNcsclULyt5EQRdvIPRDjVrY4DZiIio5J/X3Vf2Us3srRBCux3xYcBhH/ecA==", "email"=>"alex@alex.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alex@alex.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+Redirected to http://localhost:3000/puppies/140
+Completed 302 Found in 65ms (ActiveRecord: 0.1ms | Allocations: 890)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:24:08 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5368)
+
+
+Started GET "/puppies/140/edit_profile" for ::1 at 2019-12-06 11:24:33 -0600
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+  Rendering puppies/edit_profile.html.erb within layouts/application
+  Rendered puppies/edit_profile.html.erb within layouts/application (Duration: 7.7ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.3ms | Allocations: 4761)
+
+
+Started GET "/puppies/140/edit_profile" for ::1 at 2019-12-06 11:24:52 -0600
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+  Rendering puppies/edit_profile.html.erb within layouts/application
+  Rendered puppies/edit_profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms | Allocations: 4474)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:24:55 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 266)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 10.3ms | ActiveRecord: 0.9ms | Allocations: 9033)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:24:56 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.3ms | Allocations: 5039)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:24:56 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.3ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.5ms | Allocations: 5043)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:24:56 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 75.9ms | ActiveRecord: 0.5ms | Allocations: 5047)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:24:57 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 4474)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:24:57 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 0.4ms | Allocations: 5037)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:24:59 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"2zVOZrDXTgoF+Ib+Sx5+XDtuGmf8VR5Woog4fmQ4T7gqrCZE5aoJab6202WSmEHubgvusYVm05+F8RKbpFbnOg==", "search"=>""}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:63:in `search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 3.3ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.4ms | Allocations: 5266)
+
+
+Started GET "/puppies/add_friend/140" for ::1 at 2019-12-06 11:25:18 -0600
+Processing by PuppiesController#add_friend as HTML
+  Parameters: {"friend_id"=>"140"}
+  [1m[36mFriendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ? AND "friendships"."friend_id" = ? LIMIT ?[0m  [["puppy_id", 140], ["friend_id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:48:in `add_friend'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:49:in `add_friend'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:49:in `add_friend'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:49:in `add_friend'
+  [1m[36mFriendship Create (0.8ms)[0m  [1m[32mINSERT INTO "friendships" ("puppy_id", "friend_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["puppy_id", 140], ["friend_id", 140], ["created_at", "2019-12-06 17:25:18.202293"], ["updated_at", "2019-12-06 17:25:18.202293"]]
+  ↳ app/controllers/puppies_controller.rb:49:in `add_friend'
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:49:in `add_friend'
+Redirected to http://localhost:3000/puppies/140
+Completed 302 Found in 38ms (ActiveRecord: 11.7ms | Allocations: 8661)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:25:18 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 5066)
+
+
+Started GET "/puppies/140/friends" for ::1 at 2019-12-06 11:25:21 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 22.5ms | ActiveRecord: 0.4ms | Allocations: 7316)
+
+
+Started GET "/puppies/140/friends" for ::1 at 2019-12-06 11:25:22 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 2.1ms | Allocations: 839)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.3ms | Allocations: 5322)
+
+
+Started GET "/puppies/140/unfriend/140" for ::1 at 2019-12-06 11:25:40 -0600
+Processing by PuppiesController#unfriend as HTML
+  Parameters: {"id"=>"140", "friend_id"=>"140"}
+  [1m[36mFriendship Load (0.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ? AND "friendships"."friend_id" = ? LIMIT ?[0m  [["puppy_id", 140], ["friend_id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:27:in `unfriend'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:28:in `unfriend'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:28:in `unfriend'
+  [1m[36mFriendship Destroy (8.3ms)[0m  [1m[31mDELETE FROM "friendships" WHERE "friendships"."id" = ?[0m  [["id", 103]]
+  ↳ app/controllers/puppies_controller.rb:28:in `unfriend'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:28:in `unfriend'
+Redirected to http://localhost:3000/puppies/140/friends
+Completed 302 Found in 15ms (ActiveRecord: 9.4ms | Allocations: 3191)
+
+
+Started GET "/puppies/140/friends" for ::1 at 2019-12-06 11:25:40 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 2.0ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 5312)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:25:42 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 0.3ms | Allocations: 5049)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:25:42 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.2ms | Allocations: 5046)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:25:43 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 4459)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:26:45 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 22.4ms | ActiveRecord: 2.8ms | Allocations: 15456)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:26:46 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"h1UAs2fkGcFNErsqniW3jEIvrTElMY3FjqulHvEA0GN2zGiRMpleovZc7rFHo4g+F0pZ51wCQAyp0o/7MW544Q==", "search"=>""}
+  [1m[36mPuppy Load (0.6ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:63:in `search'
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 16.7ms | ActiveRecord: 1.5ms | Allocations: 9815)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:26:47 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"PQPEUIdZNomryrf5niMmjgzx9FyP0nW41pH1MEFiUB3Mmqxy0iRx6hCE4mJHpRk8WZQAivbhuHHx6N/VgQz4nw==", "search"=>""}
+  [1m[36mPuppy Load (1.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:63:in `search'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `block in search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 0.8ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 22.5ms | ActiveRecord: 2.2ms | Allocations: 9784)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:26:54 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (1.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.1ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 1.4ms | Allocations: 5033)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:26:55 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.2ms | Allocations: 4624)
+
+
+Started GET "/puppies/140/friends" for ::1 at 2019-12-06 11:26:56 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1655)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 1.0ms | Allocations: 6444)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:26:56 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 4463)
+
+
+Started GET "/puppies/140/friends" for ::1 at 2019-12-06 11:26:57 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 3.8ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 117.4ms | ActiveRecord: 0.5ms | Allocations: 5299)
+
+
+Started GET "/puppies/140" for ::1 at 2019-12-06 11:26:57 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 4463)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:27:55 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 140], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 140]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 271)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 0.5ms | Allocations: 6069)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:27:56 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:27:56 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 2.1ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4903)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:27:57 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.6ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 4290)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:28:34 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 4910)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:28:44 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 198)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4905)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:29:34 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"yoy8Zgw20fP+WjmFmA+X29KiN8FAB0LM5OYuTwaqfzE7FdREWUuWkEUUbB5Biahph8fDFzk0jwXDnwSqxsTXsw==", "picture"=>"https://cdn2-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg", "name"=>"alex", "bio"=>"lol", "breed"=>"0", "age"=>"0001-01-01", "email"=>"alexvancap@gmail.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alexvancap@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `create'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[36mPuppy Create (0.4ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "alex"], ["breed", "0"], ["age", "0001-01-01"], ["email", "alexvancap@gmail.com"], ["created_at", "2019-12-06 17:29:34.319323"], ["updated_at", "2019-12-06 17:29:34.319323"], ["password_digest", "$2a$10$oxI1qXqoRBgWrQadkgUj2.p05AHR/ZHzoGAsensJOBEkun8sK.fCO"]]
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 74ms (ActiveRecord: 1.7ms | Allocations: 3447)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:29:34 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 4848)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:29:37 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"y9CdSIlv7AQ/RWJIAHFo1kyYLkze8scPKx58rCFU4gs6SfVq3BKrZ4QLN9PZ91dkGf3amqfBCsYMZ1ZJ4TpKiQ==", "email"=>"alexvancap@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alexvancap@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+Redirected to http://localhost:3000/puppies/141
+Completed 302 Found in 66ms (ActiveRecord: 0.1ms | Allocations: 878)
+
+
+Started GET "/puppies/141" for ::1 at 2019-12-06 11:29:38 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.1ms | Allocations: 5224)
+
+
+Started GET "/puppies/141" for ::1 at 2019-12-06 11:29:40 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 4465)
+
+
+Started GET "/puppies/141" for ::1 at 2019-12-06 11:31:13 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPuppy Load (0.8ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 17.4ms | ActiveRecord: 0.8ms | Allocations: 4465)
+
+
+Started GET "/puppies/141" for ::1 at 2019-12-06 11:31:14 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.2ms | Allocations: 4462)
+
+
+Started GET "/puppies/141" for ::1 at 2019-12-06 11:31:14 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.3ms | Allocations: 4462)
+
+
+Started GET "/puppies/141" for ::1 at 2019-12-06 11:31:14 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"141"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 4465)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:31:18 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:31:18 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 4599)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:31:21 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"RVtCtPXXjRWpAl6VmGcn6FAqzEq3So7kSg5yipzAIAq0wiqWoKrKdhJMCw5B4RhaBU84nM55Qy1td1hvXK6IiA==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 75ms (ActiveRecord: 0.3ms | Allocations: 882)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 11:31:21 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 4482)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:31:34 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:31:34 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4608)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:31:54 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"0IybGEWCteqeAI3s2DnoYGhP1Ng/8iz6CY2B+FMAz6MhFfM6EP/yiSVO2HcBv9fSPSogDkbB4TMu9Ksdk25nIQ==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 66ms (ActiveRecord: 0.2ms | Allocations: 869)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 11:31:54 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 4467)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:33:11 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 308)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:33:11 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 10.4ms | ActiveRecord: 2.1ms | Allocations: 7324)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:33:17 -0600
+Processing by ApplicationController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:33:17 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 0.2ms | Allocations: 4609)
+
+
+Started GET "/puppies/130/edit_profile" for ::1 at 2019-12-06 11:33:18 -0600
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"130"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:33:18 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 4598)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:33:18 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:33:18 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4605)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:33:21 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"L/3TrzNLN9Ql7U9amBrl/VvYl4wA+eC3MuPoKmo3e9reZLuNZjZwt56jGsFBnNpPDr1jWnnKLX4VmsLPqlnTWA==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 80ms (ActiveRecord: 0.8ms | Allocations: 7215)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 11:33:21 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 4763)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:33:22 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"Oz4ifGcYUfx/CrFyV7Lk4O121N2bloULqeiNLKRneGvKp0peMmUWn8RE5OmONNtSuBMgC+KlSMKOkafJZAnQ6Q==", "search"=>""}
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:64:in `search'
+  [1m[36mPuppy Load (2.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65:in `block in search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 2.4ms | Allocations: 342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 14.7ms | ActiveRecord: 3.2ms | Allocations: 10637)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:33:32 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 307)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:33:33 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 4609)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:33:35 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 3958)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:33:52 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"x5/ZvDdLRH17JZjbM7lTDA4Pd6wOgaIsWD8bxJ4Fa/w2BrGeYjYDHsBrzUDqP2y+W2qDeneyb+V/RjEhXmvDfg==", "picture"=>"https://cdn2-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg", "name"=>"123", "bio"=>"123", "breed"=>"123", "age"=>"0004-03-12", "email"=>"123@123.be", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "123@123.be"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `create'
+[31mUnpermitted parameters: :authenticity_token, :bio, :repeated_password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "picture", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "123"], ["breed", "123"], ["age", "0004-03-12"], ["picture", "https://cdn2-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg"], ["email", "123@123.be"], ["created_at", "2019-12-06 17:33:52.971135"], ["updated_at", "2019-12-06 17:33:52.971135"], ["password_digest", "$2a$10$synT3DuIEuFzNhdotl68LO37UXfZU8DGMWwNOZWVSr9V5LsvtGiOi"]]
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 73ms (ActiveRecord: 2.3ms | Allocations: 3347)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:33:52 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 4602)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:33:58 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"zy+Emn4suibv8y4MsD8WeqIDKV1r8n1W68X/pi7QMgA+tuy4K1H9RVS9e5dpuSnI92bdixLBsJ/MvNVD7r6agg==", "email"=>"123@123.be", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "123@123.be"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `login'
+Redirected to http://localhost:3000/puppies/142
+Completed 302 Found in 66ms (ActiveRecord: 0.1ms | Allocations: 877)
+
+
+Started GET "/puppies/142" for ::1 at 2019-12-06 11:33:58 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"142"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 4469)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:35:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Alex/Desktop/PuppyBook/app/controllers/application_controller.rb:56: syntax error, unexpected ',', expecting end
+                :picture,
+                        ^
+/Users/Alex/Desktop/PuppyBook/app/controllers/application_controller.rb:72: syntax error, unexpected end-of-input, expecting ']'):
+  
+app/controllers/application_controller.rb:56: syntax error, unexpected ',', expecting end
+app/controllers/application_controller.rb:72: syntax error, unexpected end-of-input, expecting ']'
+app/controllers/application_controller.rb:56: syntax error, unexpected ',', expecting end
+app/controllers/application_controller.rb:72: syntax error, unexpected end-of-input, expecting ']'
+app/controllers/application_controller.rb:56: syntax error, unexpected ',', expecting end
+app/controllers/application_controller.rb:72: syntax error, unexpected end-of-input, expecting ']'
+Started GET "/" for ::1 at 2019-12-06 11:35:25 -0600
+Started GET "/login" for ::1 at 2019-12-06 11:36:43 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 142]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:36:in `login'
+  Rendering application/index.html.erb within layouts/application
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.6ms | Allocations: 21)
+  Rendered application/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 503)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 25.6ms | ActiveRecord: 1.9ms | Allocations: 20046)
+
+
+Completed 200 OK in 44ms (Views: 25.8ms | ActiveRecord: 0.2ms | Allocations: 16591)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:36:46 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 3956)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:37:02 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"I3yur8M/17uao0AA5my3ngAPfJvVAEIsedA4c+9aRcfS5caNlkKQ2CHtFZs/6ogsVWqITawzj+VeqRKWLzTtRQ==", "picture"=>"", "name"=>"alex", "bio"=>"lll", "breed"=>"llol", "age"=>"2918-09-13", "email"=>"alex@alex.be", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alex@alex.be"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `create'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 1346)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/application_controller.rb:25:in `create'
+Started POST "/register" for ::1 at 2019-12-06 11:43:32 -0600
+Started GET "/register" for ::1 at 2019-12-06 11:45:21 -0600
+Started GET "/" for ::1 at 2019-12-06 11:45:37 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#create as HTML
+Processing by ApplicationController#register as HTML
+Processing by ApplicationController#index as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 142], ["LIMIT", 1]]
+  Parameters: {"authenticity_token"=>"I3yur8M/17uao0AA5my3ngAPfJvVAEIsedA4c+9aRcfS5caNlkKQ2CHtFZs/6ogsVWqITawzj+VeqRKWLzTtRQ==", "picture"=>"", "name"=>"alex", "bio"=>"lll", "breed"=>"llol", "age"=>"2918-09-13", "email"=>"alex@alex.be", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alex@alex.be"], ["LIMIT", 1]]
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 142]]
+  ↳ app/controllers/application_controller.rb:23:in `create'
+  ↳ app/controllers/application_controller.rb:9:in `index'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:25:in `create'
+  [1m[36mPuppy Create (0.4ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "alex"], ["breed", "llol"], ["age", "2918-09-13"], ["email", "alex@alex.be"], ["created_at", "2019-12-06 17:45:38.343477"], ["updated_at", "2019-12-06 17:45:38.343477"], ["password_digest", "$2a$10$R.MDZI4FI84eSfL1CXemcOQDSM1U111dpCTgoKfSa8gF4fUoOhhbe"]]
+  ↳ app/controllers/application_controller.rb:25:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:25:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:26:in `create'
+  [1m[36mPuppy Update (0.7ms)[0m  [1m[33mUPDATE "puppies" SET "picture" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["picture", ""], ["updated_at", "2019-12-06 17:45:38.354987"], ["id", 143]]
+  ↳ app/controllers/application_controller.rb:26:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:26:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 112ms (ActiveRecord: 3.3ms | Allocations: 11899)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 142ms (Views: 127.5ms | ActiveRecord: 0.0ms | Allocations: 24785)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 114.5ms | ActiveRecord: 0.4ms | Allocations: 16441)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:45:41 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:45:41 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.6ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 4633)
+
+
+Started GET "/login/register" for ::1 at 2019-12-06 11:45:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/login/register"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2019-12-06 11:45:50 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 3972)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:46:06 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"rh8SSt7z1C7gEQReFCgCI8bB5i+V36OGpXlnGzMlpqJfhnpoi46TTVtfUcXNrj2Rk6QS+ezsbk+CAE3+80sOIA==", "picture"=>"", "name"=>"alex", "bio"=>"lol", "breed"=>"alex", "age"=>"0001-01-01", "email"=>"a@a.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23:in `create'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:25:in `create'
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "alex"], ["breed", "alex"], ["age", "0001-01-01"], ["email", "a@a.com"], ["created_at", "2019-12-06 17:46:06.246780"], ["updated_at", "2019-12-06 17:46:06.246780"], ["password_digest", "$2a$10$d6qU62Mm9RIauveXQ/3Q5eesE934Ahze/se9h3iHYqasnGWGjAXqW"]]
+  ↳ app/controllers/application_controller.rb:25:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:25:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:26:in `create'
+  [1m[36mPuppy Update (0.4ms)[0m  [1m[33mUPDATE "puppies" SET "picture" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["picture", ""], ["updated_at", "2019-12-06 17:46:06.252343"], ["id", 144]]
+  ↳ app/controllers/application_controller.rb:26:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:26:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 77ms (ActiveRecord: 3.8ms | Allocations: 5331)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:46:06 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4601)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:46:11 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"lgvRYbVd++6RvQWViLlwKlGnI2il5dRq5ABE9H0QuFRnkrlD4CC8jSrzUA5RP0+YBMLXvtzWGaPDeW4RvX4Q1g==", "email"=>"a@a.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/144
+Completed 302 Found in 71ms (ActiveRecord: 0.2ms | Allocations: 876)
+
+
+Started GET "/puppies/144" for ::1 at 2019-12-06 11:46:11 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"144"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 144], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 23)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 4591)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:47:29 -0600
+Started GET "/logout" for ::1 at 2019-12-06 11:47:39 -0600
+Started GET "/logout" for ::1 at 2019-12-06 11:48:40 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 416)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:48:40 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 1.7ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 51.7ms | ActiveRecord: 0.6ms | Allocations: 12536)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:48:47 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 20.3ms | ActiveRecord: 0.5ms | Allocations: 10916)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:49:04 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"M2sIyRzLMmNDMAvf26huDf0hIAhufD2aw2IBx/5fGTjC8mDrSbZ1APh+XkQCLlG/qETU3hdP8FPkGysiPjGxug==", "picture"=>"", "name"=>"alex", "bio"=>"alex", "breed"=>"alex", "age"=>"0001-01-01", "email"=>"al@al.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "al@al.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `create'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[36mPuppy Create (1.2ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "alex"], ["breed", "alex"], ["age", "0001-01-01"], ["email", "al@al.com"], ["created_at", "2019-12-06 17:49:04.405605"], ["updated_at", "2019-12-06 17:49:04.405605"], ["password_digest", "$2a$10$rwH4nIKyLNwluCCv2D0IcuwoH3iScZnaDQT9WhpNjENte/Qr9rM9S"]]
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 82ms (ActiveRecord: 3.2ms | Allocations: 3666)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:49:04 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 4596)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:49:09 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"bCmBl9I1MMCtGXQMhX/8UWjJot9b9JDguxlofNvDOSmdsOm1h0h3oxZXIZdc+cPjPaxWCSLHXSmcYEKZG62Rqw==", "email"=>"al@al.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "al@al.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/145
+Completed 302 Found in 64ms (ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started GET "/puppies/145" for ::1 at 2019-12-06 11:49:09 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"145"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 145], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 5352)
+
+
+Started GET "/puppies/145" for ::1 at 2019-12-06 11:49:12 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"145"}
+  [1m[36mPuppy Load (1.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 145], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.0ms | Allocations: 4468)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 11:49:58 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:49:58 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.4ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 0.8ms | Allocations: 7332)
+
+
+Started GET "/register" for ::1 at 2019-12-06 11:50:02 -0600
+Processing by ApplicationController#register as HTML
+  Rendering application/register.html.erb within layouts/application
+  Rendered application/register.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 10180)
+
+
+Started POST "/register" for ::1 at 2019-12-06 11:50:18 -0600
+Processing by ApplicationController#create as HTML
+  Parameters: {"authenticity_token"=>"RbpOIEOGtJ0/llNvB29avkMqZtQr8CU5quhYnmkIUn+0IyYCFvvz/oTYBvTe6WUMFk+SAlLD6PCNkXJ7qWb6/Q==", "picture"=>"", "name"=>"z", "bio"=>"lol", "breed"=>"lol", "age"=>"0001-01-01", "email"=>"z@z.com", "password"=>"[FILTERED]", "repeated_password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "z@z.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `create'
+[31mUnpermitted parameters: :authenticity_token, :picture, :bio, :repeated_password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "age", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "z"], ["breed", "lol"], ["age", "0001-01-01"], ["email", "z@z.com"], ["created_at", "2019-12-06 17:50:18.568304"], ["updated_at", "2019-12-06 17:50:18.568304"], ["password_digest", "$2a$10$XOGZsXEDUThEQTtyGULJFOPiCDFq7BvGuoItA.fv3HhE.9WQ5MwPS"]]
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:28:in `create'
+  [1m[36mPuppy Update (0.4ms)[0m  [1m[33mUPDATE "puppies" SET "picture" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["picture", "http://www.citydogshare.org/assets/default_dog-f1f5e5aa031ad0a956a936dc4fb4bde95c712f2ad1f99e883b5bc58d22aec668.jpg"], ["updated_at", "2019-12-06 17:50:18.573699"], ["id", 146]]
+  ↳ app/controllers/application_controller.rb:28:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:28:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 79ms (ActiveRecord: 4.0ms | Allocations: 5691)
+
+
+Started GET "/login" for ::1 at 2019-12-06 11:50:18 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4593)
+
+
+Started POST "/login" for ::1 at 2019-12-06 11:50:23 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"Y44H/ZxdCl7sfdIk5ySA+yAZfdipwjPrmutzcLc5EA6SF2/fySBNPVczh78+or9JdXyJDtDx/iK9klmVd1e4jA==", "email"=>"z@z.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "z@z.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/146
+Completed 302 Found in 66ms (ActiveRecord: 0.2ms | Allocations: 891)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:50:23 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 24)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 4757)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:51:51 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 244ms (Views: 150.9ms | ActiveRecord: 0.3ms | Allocations: 5714)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:51:52 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 4472)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:52:04 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 5707)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:52:05 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 4472)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:52:05 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 4463)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:52:15 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 0.2ms | Allocations: 5700)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:52:16 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 4466)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:52:47 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 5714)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:55:10 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.3ms | Allocations: 5707)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:55:11 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4466)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:55:17 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.3ms | Allocations: 5693)
+
+
+Started GET "/" for ::1 at 2019-12-06 11:55:18 -0600
+Processing by ApplicationController#index as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `index'
+  [1m[36mFriendship Load (0.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 146]]
+  ↳ app/controllers/application_controller.rb:9:in `index'
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 281)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 10962)
+
+
+Started GET "/puppies/146/friends" for ::1 at 2019-12-06 11:55:19 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 146]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2407)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 28.5ms | ActiveRecord: 0.5ms | Allocations: 7805)
+
+
+Started GET "/puppies/146" for ::1 at 2019-12-06 11:55:19 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 19)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 4461)
+
+
+Started POST "/search" for ::1 at 2019-12-06 11:55:24 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"fUshOVFG+lz/y5eICXg4HwL/EyWuUa1YrB9IFQGlpNSM0kkbBDu9P0SFwhPQ/getV5rn89diYJGLZmLwwcsMVg==", "search"=>""}
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 1.7ms | Allocations: 393)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 10.5ms | ActiveRecord: 1.4ms | Allocations: 13009)
+
+
+Started GET "/puppies/146/edit_profile" for ::1 at 2019-12-06 11:57:56 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+  Rendering puppies/edit_profile.html.erb within layouts/application
+  Rendered puppies/edit_profile.html.erb within layouts/application (Duration: 0.8ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 16.1ms | ActiveRecord: 1.0ms | Allocations: 14553)
+
+
+Started GET "/puppies/146/edit_profile" for ::1 at 2019-12-06 12:00:05 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Alex/Desktop/PuppyBook/app/controllers/puppies_controller.rb:50: syntax error, unexpected '}', expecting =>
+...te({picture:: params[:picture]})
+...                              ^
+/Users/Alex/Desktop/PuppyBook/app/controllers/puppies_controller.rb:65: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/puppies_controller.rb:50: syntax error, unexpected '}', expecting =>
+app/controllers/puppies_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+app/controllers/puppies_controller.rb:50: syntax error, unexpected '}', expecting =>
+app/controllers/puppies_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+app/controllers/puppies_controller.rb:50: syntax error, unexpected '}', expecting =>
+app/controllers/puppies_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+Started GET "/puppies/146/edit_profile" for ::1 at 2019-12-06 12:00:36 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"146"}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 24ms (ActiveRecord: 1.3ms | Allocations: 9801)
+
+
+Started GET "/login" for ::1 at 2019-12-06 12:00:36 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 5536)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 12:00:38 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/login" for ::1 at 2019-12-06 12:00:38 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.2ms | Allocations: 4616)
+
+
+Started GET "/logout" for ::1 at 2019-12-06 12:00:39 -0600
+Processing by ApplicationController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/login" for ::1 at 2019-12-06 12:00:39 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.4ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 4607)
+
+
+Started POST "/login" for ::1 at 2019-12-06 12:00:42 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"h3l5Ri7IpVEMspcf022NBdkbcPFYu5XFMOAOcbk09fh24BFke7XiMrf8woQK67K3jH6EJyGIWAwXmSSUeVpdeg==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 66ms (ActiveRecord: 0.2ms | Allocations: 1007)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 12:00:42 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 5243)
+
+
+Started GET "/puppies/130/edit_profile" for ::1 at 2019-12-06 12:00:44 -0600
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 812)
+
+
+Started GET "/login" for ::1 at 2019-12-06 12:00:44 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 4608)
+
+
+Started POST "/login" for ::1 at 2019-12-06 12:00:47 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"MIQ/YzF0LurF9ksi0mYjlcdNWeTH1LuxsDkJEZk0oFLBHVdBZAlpiX64HrkL4BwnkiitMr7ndniXQCP0WVoI0A==", "email"=>"bobby@puppy.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "bobby@puppy.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 65ms (ActiveRecord: 0.2ms | Allocations: 880)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 12:00:48 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 4466)
+
+
+Started GET "/puppies/130/friends" for ::1 at 2019-12-06 12:00:49 -0600
+Processing by PuppiesController#friends as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:18:in `friends'
+  Rendering puppies/friends.html.erb within layouts/application
+  [1m[36mPuppy Load (0.7ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" INNER JOIN "friendships" ON "puppies"."id" = "friendships"."friend_id" WHERE "friendships"."puppy_id" = ?[0m  [["puppy_id", 130]]
+  ↳ app/views/puppies/friends.html.erb:3
+  Rendered puppies/friends.html.erb within layouts/application (Duration: 15.8ms | Allocations: 2470)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 26.7ms | ActiveRecord: 1.4ms | Allocations: 8334)
+
+
+Started GET "/puppies/130/edit_profile" for ::1 at 2019-12-06 12:00:49 -0600
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:38:in `edit_profile'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 815)
+
+
+Started GET "/login" for ::1 at 2019-12-06 12:00:50 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 4609)
+
+
+Started GET "/puppies/130/edit_profile" for ::1 at 2019-12-06 12:01:57 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PuppiesController#edit_profile as HTML
+  Parameters: {"id"=>"130"}
+  Rendering puppies/edit_profile.html.erb within layouts/application
+  Rendered puppies/edit_profile.html.erb within layouts/application (Duration: 2.1ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 4379)
+
+
+Started POST "/puppies/130/edit_profile" for ::1 at 2019-12-06 12:02:32 -0600
+Processing by PuppiesController#edit_profile_controller as HTML
+  Parameters: {"authenticity_token"=>"zhrBZ6624+B0xSG9KCt9WRIyLGJDh+cWT5tWz7Qac/k/g6lF+8ukg8+LdCbxrULrR1fYtDq0Kt9o4nwqdHTbew==", "email"=>"alexx@alexx.com", "password"=>"[FILTERED]", "bio"=>"lol", "picture"=>"https://miro.medium.com/fit/c/96/96/1*oZxJbt9M42QSrfz3BzH6NA.jpeg", "id"=>"130"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:40:in `edit_profile_controller'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:43:in `edit_profile_controller'
+  [1m[36mPuppy Update (0.6ms)[0m  [1m[33mUPDATE "puppies" SET "password_digest" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["password_digest", "$2a$10$akyFTlIS7Li4FCac5Rg25u4dgp7Cl3r5QLPFXzxAPGPZULahaEfxO"], ["updated_at", "2019-12-06 18:02:32.605898"], ["id", 130]]
+  ↳ app/controllers/puppies_controller.rb:43:in `edit_profile_controller'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:43:in `edit_profile_controller'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:46:in `edit_profile_controller'
+  [1m[36mPuppy Update (0.4ms)[0m  [1m[33mUPDATE "puppies" SET "email" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["email", "alexx@alexx.com"], ["updated_at", "2019-12-06 18:02:32.626996"], ["id", 130]]
+  ↳ app/controllers/puppies_controller.rb:46:in `edit_profile_controller'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:46:in `edit_profile_controller'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:49:in `edit_profile_controller'
+  [1m[36mPuppy Update (0.7ms)[0m  [1m[33mUPDATE "puppies" SET "bio" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["bio", "lol"], ["updated_at", "2019-12-06 18:02:32.631383"], ["id", 130]]
+  ↳ app/controllers/puppies_controller.rb:49:in `edit_profile_controller'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:49:in `edit_profile_controller'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:52:in `edit_profile_controller'
+  [1m[36mPuppy Update (0.4ms)[0m  [1m[33mUPDATE "puppies" SET "picture" = ?, "updated_at" = ? WHERE "puppies"."id" = ?[0m  [["picture", "https://miro.medium.com/fit/c/96/96/1*oZxJbt9M42QSrfz3BzH6NA.jpeg"], ["updated_at", "2019-12-06 18:02:32.637105"], ["id", 130]]
+  ↳ app/controllers/puppies_controller.rb:52:in `edit_profile_controller'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:52:in `edit_profile_controller'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 127ms (ActiveRecord: 7.2ms | Allocations: 20785)
+
+
+Started GET "/login" for ::1 at 2019-12-06 12:02:32 -0600
+Processing by ApplicationController#login as HTML
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 4775)
+
+
+Started POST "/login" for ::1 at 2019-12-06 12:02:36 -0600
+Processing by ApplicationController#login as HTML
+  Parameters: {"authenticity_token"=>"0vo7As4CvX+s6KWQIJX+wREZfZp6JHi7vJ+PQiOwgwAjY1Mgm3/6HBem8Av5E8FzRHyJTAMXtXKb5qWn494rgg==", "email"=>"alexx@alexx.com", "password"=>"[FILTERED]"}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."email" = ? LIMIT ?[0m  [["email", "alexx@alexx.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:37:in `login'
+Redirected to http://localhost:3000/puppies/130
+Completed 302 Found in 66ms (ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/puppies/130" for ::1 at 2019-12-06 12:02:36 -0600
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:10:in `show'
+  Rendering puppies/show.html.erb within layouts/application
+  Rendered puppies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 4476)
+
+
+Started POST "/search" for ::1 at 2019-12-06 12:02:56 -0600
+Processing by ApplicationController#search as HTML
+  Parameters: {"authenticity_token"=>"8JDMuCTGgs7nQArZiulC6eUyY21X3UY2T/01EqystbUBCaSacbvFrVwOX0JTb31bsFeXuy7ui/9ohB/3bMIdNw==", "search"=>""}
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/application_controller.rb:67:in `search'
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  [1m[36mCACHE Puppy Load (0.0ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:68:in `block in search'
+  Rendering application/search.html.erb within layouts/application
+  Rendered application/search.html.erb within layouts/application (Duration: 2.6ms | Allocations: 387)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 12.9ms | ActiveRecord: 1.3ms | Allocations: 12995)
+
+
+Started GET "/search" for ::1 at 2019-12-06 12:03:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
